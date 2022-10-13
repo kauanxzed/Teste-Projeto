@@ -22,7 +22,7 @@ namespace UsuariosApi.Controllers
         {
             var resultado = _cadastroService.CadastraUsuario(createDto);
             if (resultado.Result.IsFailed) return StatusCode(500);
-            return Ok(resultado.Result.Successes);
+            return Ok(resultado.Result.Successes.FirstOrDefault());
         }
 
         [HttpGet("/ativa")]
@@ -30,7 +30,7 @@ namespace UsuariosApi.Controllers
         {
             Result resultado = _cadastroService.AtivaContaUsuario(request);
             if (resultado.IsFailed) return StatusCode(500);
-            return Ok(resultado.Successes);
+            return Ok(resultado.Successes.FirstOrDefault());
         }
 
     }

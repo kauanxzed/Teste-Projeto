@@ -1,14 +1,16 @@
 using IfoodApi.Data;
 using Microsoft.EntityFrameworkCore;
+using IfoodApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-
+builder.Services.AddDbContext<AppDbContext>(opts => 
+    opts.UseMySql(@"server=localhost;database=Userdb;uid=root;password=root;", new MySqlServerVersion(new Version(8, 0))));
 builder.Services.AddControllers();
-builder.Services.AddDbContext<AppDbContext>
-    (opt => opt.UseMySQL("server=localhost;database=ifoodb;user=root;password=root"));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped<RestauranteService,RestauranteService>();
 
 var app = builder.Build();
 

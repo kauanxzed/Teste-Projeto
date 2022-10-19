@@ -1,5 +1,5 @@
-﻿using IfoodApi.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using IfoodApi.Models;
 
 namespace IfoodApi.Data
 {
@@ -14,6 +14,7 @@ namespace IfoodApi.Data
         {
 
         }
-        public DbSet<Usuario> Usuario { get; set; }
+
+        public DbSet<Restaurante> Restaurantes { get; set; }
     }
 }

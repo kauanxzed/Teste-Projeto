@@ -230,16 +230,16 @@ namespace UsuariosApi.Migrations
                         {
                             Id = 99999,
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "169b86a8-bbcd-490c-944d-8ddb54c44d6d",
+                            ConcurrencyStamp = "da252c81-58dd-43b1-adf3-56766e91c526",
                             DataNascimento = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "admin@admin.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAELLir3KZ3cXhJjXaQr3y8/tnnlqlNt528mqUUTdwZAlbpoSb2hf+7y9HFAQv0gheAQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAgWc4EcPgymjT/JmSfQUKBINwcasp3Y0gQatdIB2KgFKyWOJKLIGUEVc9+poFFj2g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2b1b4bb4-c526-4659-863d-81d0ea1b92f5",
+                            SecurityStamp = "f8dfca69-4a62-4760-b767-ce0a3152e80c",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         });
@@ -255,14 +255,14 @@ namespace UsuariosApi.Migrations
                         new
                         {
                             Id = 99999,
-                            ConcurrencyStamp = "9cc43db2-216e-42bd-95fb-83233b59c24e",
+                            ConcurrencyStamp = "28e09615-0c63-4900-959a-27ce14fd4aab",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = 99997,
-                            ConcurrencyStamp = "7b88fb51-85b6-4be5-abe4-72cb78869d95",
+                            ConcurrencyStamp = "28abfca2-10fe-41d3-8758-489bcaa8ec6d",
                             Name = "regular",
                             NormalizedName = "REGULAR"
                         });

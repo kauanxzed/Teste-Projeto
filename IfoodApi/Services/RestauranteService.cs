@@ -16,17 +16,23 @@ namespace IfoodApi.Services
             _context = context;
         }
 
-        public Result CadastraRestaurante(CreateRestauranteDto dto)
+        public ReadRestauranteDto CadastraRestaurante(CreateRestauranteDto dto)
         {
+
             Restaurante restaurante = _mapper.Map<Restaurante>(dto);
             _context.Restaurantes.Add(restaurante);
             _context.SaveChanges();
-            var restauranteCriado = _mapper.Map<ReadRestauranteDto>(restaurante).ToResult();
-            if(restauranteCriado.IsFailed)
+            return _mapper.Map<ReadRestauranteDto>(restaurante);
+        }
+
+        public ReadRestauranteDto RecuperaRestaurantePorId(int id)
+        {
+            Restaurante restaurante = _context.Restaurantes.FirstOrDefault(restaurante => restaurante.Id == id);
+            if (restaurante != null)
             {
-                return Result.Fail("não cadastrou o restaurante");
+                return _mapper.Map<ReadRestauranteDto>(restaurante);
             }
-            return Result.Ok();
+            return null;
         }
     }
 }

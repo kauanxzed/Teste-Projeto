@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Dtos\NovaPasta1\**" />
+    <Compile Remove="Data\Dtos\NovaPasta2\**" />
+    <Content Remove="Data\Dtos\NovaPasta1\**" />
+    <Content Remove="Data\Dtos\NovaPasta2\**" />
+    <EmbeddedResource Remove="Data\Dtos\NovaPasta1\**" />
+    <EmbeddedResource Remove="Data\Dtos\NovaPasta2\**" />
+    <None Remove="Data\Dtos\NovaPasta1\**" />
+    <None Remove="Data\Dtos\NovaPasta2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="FluentResults" Version="3.14.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />
@@ -25,11 +36,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <None Include="..\.editorconfig" Link=".editorconfig" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\.editorconfig" Link=".editorconfig" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

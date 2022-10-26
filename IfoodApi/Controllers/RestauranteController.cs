@@ -17,11 +17,19 @@ namespace IfoodApi.Controllers
         }
 
         [HttpPost("/cadastro")]
-        public IActionResult CadastraRestaurante(CreateRestauranteDto restauranteDto)
+        public IActionResult CadastraRestaurante([FromBody] CreateRestauranteDto restauranteDto)
         {
-            var resultado = _restauranteService.CadastraRestaurante(restauranteDto);
-            if(resultado.IsFailed) return StatusCode(500);
-            return Ok();
+            ReadRestauranteDto readtDto = _restauranteService.CadastraRestaurante(restauranteDto);
+            return CreatedAtAction(nameof(RecuperaRestaurantePorId), new { Id = readtDto.Id }, readtDto);
+        }
+
+
+        [HttpGet("{id}")]
+        public IActionResult RecuperaRestaurantePorId(int id)
+        {
+            ReadRestauranteDto readDto = _restauranteService.RecuperaRestaurantePorId(id);
+            if (readDto == null) return NotFound();
+            return Ok(readDto);
         }
     }
 }

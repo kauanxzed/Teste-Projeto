@@ -7,10 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddDbContext<AppDbContext>(opts => 
-    opts.UseMySql(@"server=localhost;database=Userdb;uid=root;password=root;", new MySqlServerVersion(new Version(8, 0))));
+    opts.UseMySql(@"server=localhost;database=IfoodDb;uid=root;password=root;", new MySqlServerVersion(new Version(8, 0))));
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<RestauranteService,RestauranteService>();
+builder.Services.AddScoped<AddressService, AddressService>();
 
 var app = builder.Build();
 

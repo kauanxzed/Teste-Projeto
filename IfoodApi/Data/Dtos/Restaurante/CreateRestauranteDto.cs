@@ -8,7 +8,6 @@ namespace IfoodApi.Data.Dtos.Restaurante
         [Required]
         public string Nome { get; set; }
         [Required]
-        public Address Address { get; set; }
-
+        public int AddressId { get; set; }
     }
 }

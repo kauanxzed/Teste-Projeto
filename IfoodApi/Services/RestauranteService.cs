@@ -1,6 +1,6 @@
 using FluentResults;
 using AutoMapper;
-using IfoodApi.Data.Dtos.Restaurante;
+using IfoodApi.Data.Dtos.RestauranteDto;
 using IfoodApi.Data;
 using IfoodApi.Models;
 

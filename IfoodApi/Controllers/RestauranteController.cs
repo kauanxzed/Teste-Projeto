@@ -1,5 +1,5 @@
 using FluentResults;
-using IfoodApi.Data.Dtos.Restaurante;
+using IfoodApi.Data.Dtos.RestauranteDto;
 using Microsoft.AspNetCore.Mvc;
 using IfoodApi.Services;
 

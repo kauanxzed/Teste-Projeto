@@ -1,6 +1,6 @@
 using AutoMapper;
 using IfoodApi.Models;
-using IfoodApi.Data.Dtos.Restaurante;
+using IfoodApi.Data.Dtos.RestauranteDto;
 
 namespace IfoodApi.Profiles
 {

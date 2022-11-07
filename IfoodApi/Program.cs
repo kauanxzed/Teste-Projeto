@@ -12,6 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<RestauranteService,RestauranteService>();
 builder.Services.AddScoped<AddressService, AddressService>();
+builder.Services.AddScoped<ProdutoService, ProdutoService>();
 
 var app = builder.Build();
 

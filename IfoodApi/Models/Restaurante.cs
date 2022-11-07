@@ -10,9 +10,9 @@ namespace IfoodApi.Models
         [Required]
         public string Nome { get; set; }
         [Required]
-        public Address Address { get; set; }
+        public virtual Address Address { get; set; }
         [Required]
         public int AddressId { get; set; }
-
+        public virtual List<Produto> Produtos { get; set; }
     }
 }
